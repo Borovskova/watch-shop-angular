@@ -1,0 +1,149 @@
+.container {
+    margin-top: 0;
+    /* border: solid blue; */
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.navbar>.container-fluid {
+    padding-top: 40px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 48px;
+}
+
+.navbar-expand-lg .navbar-nav .first-link {
+    padding-left: 0;
+}
+
+.navbar-expand-lg .navbar-nav .active {
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: underline 1px rgba(26, 26, 26, 1);
+    text-underline-offset: 5px;
+}
+
+.product-card {
+    margin-top: 31px;
+}
+
+.watch-name {
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(26, 26, 26, 1);
+    margin-bottom: 0;
+    padding-top: 11px;
+}
+
+.watch-description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(168, 168, 168, 1);
+}
+
+.watch-price {
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(26, 26, 26, 1);
+    padding-top: 6px;
+    margin-bottom: 0;
+}
+
+.watch-old-price {
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 52, 81, 1);
+}
+
+.watch-new-price {
+    color: rgba(128, 128, 128, 1);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.button-wrapper{
+    width: 100%;
+    text-align: center;
+    padding-top: 97px;
+    padding-bottom: 85px;
+}
+.load-more {
+    min-height: 56px;
+    width: 302px;
+    border-radius: 0px;
+    background: rgba(26, 26, 26, 1);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgb(247, 247, 247);
+}
+.load-more:hover{
+    background: rgb(247, 247, 247);
+    color: rgba(26, 26, 26, 1);
+}
+
+@media screen and (max-width:992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navbar>.container-fluid {
+        justify-content: right;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .row,
+    .watch-new-price,
+    .watch-old-price,
+    .watch-price,
+    .watch-description,
+    .watch-name {
+        text-align: center;
+    }
+}
