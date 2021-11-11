@@ -111,3 +111,17 @@ a {
     border: 1px solid rgba(36, 36, 36, 1);
     border-radius: 0px;
 }
+
+@media screen and (max-width:768px) {
+    .text-content h1 {
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    .banner2-input,
+    .banner2-input2 {
+        min-height: auto;
+        min-width: auto;
+        max-height: 35px;
+    }
+}

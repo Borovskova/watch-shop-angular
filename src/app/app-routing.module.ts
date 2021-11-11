@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Banner1Component } from './components/banner1/banner1.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'banner1', pathMatch: 'full' },
-  {path: 'banner1', component: Banner1Component},
+  { path: '', redirectTo: 'header', pathMatch: 'full' },
+  {path: 'header', component: HeaderComponent},
 ];
 
 @NgModule({

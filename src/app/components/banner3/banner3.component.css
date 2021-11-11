@@ -1,7 +1,6 @@
 .container {
     padding-top: 113px;
     padding-bottom: 113px;
-    /* border: solid brown; */
 }
 
 .col-lg-6 {
@@ -44,4 +43,30 @@ a {
     text-align: left;
     color: rgba(26, 26, 26, 1);
     text-underline-offset: 1.5px;
+}
+@media screen and (max-width: 992px) {
+    img{
+        max-width: 80%;
+        max-height: 80%;
+    }
+    h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .col-lg-6, .col-lg-12{
+        
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        padding-bottom: 90px;
+    }
+    h1{
+        padding-bottom: 70px;
+    }
+    .col-lg-6, .col-lg-12{
+        padding-top: 0;
+        text-align: center;
+    }
 }

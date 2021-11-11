@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
 import { ProductCardsService } from 'src/app/servises/product-cards.service';
 
 @Component({
@@ -34,12 +33,18 @@ export class ProductCardsComponent implements OnInit {
 
   public cards: any = [];
   public newCards: any = [];
+  public buttonText: string = 'Shop New Arrivals';
+
 
 
 
   constructor(public productCardsService: ProductCardsService) { }
 
   ngOnInit() {
+    this.loadDefaultCards()
+  }
+
+  public loadDefaultCards() {
     this.productCardsService.getProductCardsUrl()
       .subscribe(
         response => {
@@ -51,20 +56,29 @@ export class ProductCardsComponent implements OnInit {
       )
   }
 
-
-  loadMoreCards() {
-    console.log('work');
-    
+  public loadMoreCards(el: HTMLElement,) {
     this.productCardsService.getMoreProductCardsUrl()
       .subscribe(
         response => {
           this.newCards = response.cards;
+          if (this.cards.length <= 60) {
+            Array.prototype.push.apply(this.cards, this.newCards);
+          }
         },
         error => {
           console.log(error)
         }
       )
-    setTimeout(() => this.cards.splice(0, 10), 5000);
-    Array.prototype.push.apply(this.cards, this.newCards);
+    if (this.cards.length >= 40 && this.cards.length < 60) {
+      this.buttonText = 'Hide New Arrivals';
+    } else if (this.cards.length >= 60) {
+      // this.cards.splice(0, 60);
+      this.cards = [];
+      this.loadDefaultCards()
+      el.scrollIntoView({ behavior: 'smooth' });
+      this.buttonText = 'Shop New Arrivals';
+    } else {
+      this.buttonText = 'Shop New Arrivals';
+    }
   }
 }

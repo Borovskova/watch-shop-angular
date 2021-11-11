@@ -49,6 +49,7 @@ a {
     letter-spacing: 0em;
     text-align: left;
     color: rgba(42, 42, 42, 1);
+    cursor: pointer;
 }
 
 .search-wrapper {
@@ -103,9 +104,6 @@ p {
 }
 
 .input-search-field {
-    /* position: absolute;
-    top: 65%;
-    left: -343px; */
     min-width: 320px;
     min-height: 63px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -131,13 +129,56 @@ p {
         top: -5px;
         left: -2px;
     }
+
+    .container-fluid {
+        position: relative;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        z-index: 3;
+        background-color: white;
+    }
+
+    .navbar-collapse .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    .navbar-light .navbar-toggler {
+        position: absolute;
+        left: 36%;
+    }
 }
 
+
 @media screen and (max-width: 768px) {
+    .container-fluid {
+        justify-content: center;
+    }
+
+    .navbar-brand-wrapper {
+        padding-bottom: 60px;
+    }
+
+    .navbar-light .navbar-toggler {
+        top: 30%;
+        left: 44%;
+    }
+
+    .navbar-expand-lg {
+        justify-content: center;
+    }
+
+    .navbar-collapse {
+        top: 120px;
+    }
+
     .input-search-field {
-        margin-left: 50px;
-       
-     }
+        margin-left: 82px;
+    }
 
     .vertical-line {
         top: -4px;
@@ -151,144 +192,76 @@ p {
 
     .search-wrapper-flex {
         padding-top: 20px;
+        padding-left: 60px;
         justify-content: center;
+    }
+}
+
+@media screen and (width: 768px) {
+    .input-search-field {
+        margin-left: 172px;
     }
 }
 
 @media screen and (max-width: 576px) {
     .input-search-field {
-       margin-left: 65px;
-      
+        margin-left: 98px;
+
     }
 }
-@media screen and (max-width: 571px) {
+
+@media screen and (width: 576px) {
     .input-search-field {
-       margin-left: 62px;
-      
+        margin-left: 82px;
     }
+}
+
+@media screen and (max-width: 571px) {
     .vertical-line {
         top: -5px;
         left: -2px;
     }
 }
+
 @media screen and (max-width: 560px) {
     .input-search-field {
-       margin-left: 55px;    
+        margin-left: 90px;
     }
 }
+
 @media screen and (max-width: 550px) {
     .input-search-field {
-       margin-left: 50px;    
-    }
-}
-@media screen and (max-width: 537px) {
-    .input-search-field {
-       margin-left: 45px;    
-    }
-}
-@media screen and (max-width: 525px) {
-    .input-search-field {
-       margin-left: 40px;    
-    }
-}
-@media screen and (max-width: 517px) {
-    .input-search-field {
-       margin-left: 35px;    
-    }
-}
-@media screen and (max-width: 507px) {
-    .input-search-field {
-       margin-left: 30px;    
-    }
-}
-
-/* @media screen and (max-width: 576px) {
-    .input-search-field {
-        left: -423px;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .input-search-field {
-        left: -439px;
-    }
-}
-
-@media screen and (max-width: 570px) {
-    .input-search-field {
-        left: -435px;
-    }
-}
-
-@media screen and (max-width: 565px) {
-    .input-search-field {
-        left: -432px;
-        top: 10px;
-    }
-}
-
-@media screen and (max-width: 555px) {
-    .input-search-field {
-        left: -427px;
+        margin-left: 85px;
     }
 }
 
 @media screen and (max-width: 540px) {
     .input-search-field {
-        left: -420px;
+        margin-left: 80px;
     }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 525px) {
     .input-search-field {
-        left: -415px;
+        margin-left: 75px;
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 515px) {
     .input-search-field {
-        left: -410px;
+        margin-left: 70px;
     }
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 505px) {
     .input-search-field {
-        left: -405px;
+        margin-left: 65px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .input-search-field {
-        left: -400px;
+        margin-left: 60px;
     }
-}
 
-@media screen and (max-width: 490px) {
-    .input-search-field {
-        left: -394px;
-    }
 }
-
-@media screen and (max-width: 480px) {
-    .input-search-field {
-        left: -390px;
-    }
-}
-
-@media screen and (max-width: 470px) {
-    .input-search-field {
-        left: -385px;
-    }
-}
-
-@media screen and (max-width: 460px) {
-    .input-search-field {
-        left: -380px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .input-search-field {
-        left: -375px;
-    }
-} */
