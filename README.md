@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/83124472/141325684-30c138f5-7c84-41d5-a478-533eae9a817b.png)
+
 # WatchShop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
