@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -6,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- public isActive: string = 'home';
+
+  public isActive: string = 'home';
+  @Output() onScroll: EventEmitter<any> = new EventEmitter;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  public scrollFn(el: HTMLElement, name: string) {
-    el.scrollIntoView({ behavior: 'smooth' });
+  public scrollFn(elemID: any, name: string) {
     this.isActive = name;
+    this.onScroll.emit(elemID);
   }
 }
